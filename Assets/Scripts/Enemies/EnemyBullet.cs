@@ -9,6 +9,7 @@ public class EnemyBullet : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
     public float force;
+    private Animator _animator;
 
     private float timer;
     
@@ -21,7 +22,9 @@ public class EnemyBullet : MonoBehaviour
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
         
         float rot = Mathf.Atan2(-direction.y,-direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0,0,rot+90);
+        transform.rotation = Quaternion.Euler(0,0,rot+180);
+
+        _animator = GetComponent<Animator>();
     }
     
     void Update()
@@ -40,8 +43,9 @@ public class EnemyBullet : MonoBehaviour
             // TODO playerHealth zabieranie życia playerowi 
             // other.gameObject.GetComponent<playerHealth>() 
             
-            Destroy(gameObject);
+            _animator.SetTrigger("Hit");
+            rb.velocity = Vector2.zero;
+            Destroy(gameObject,0.5f);
         }
-        
     }
 }
