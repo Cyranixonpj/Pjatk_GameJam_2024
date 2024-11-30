@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1121516791243994613}
   - component: {fileID: 3943260015977767668}
   - component: {fileID: 7311964304806201671}
-  - component: {fileID: 8782498564727171700}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -31,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.687, y: 0.41294298, z: 1}
+  m_LocalScale: {x: 0.687, y: 0.36318645, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6499480336822492228}
@@ -165,22 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   weapon: {fileID: 7330892577790148229}
---- !u!114 &8782498564727171700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669886379336587123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b723b6a453ffa7c479bf4c4031c0152a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _currentHealth: 20
-  _maxHealth: 20
-  _healthDecreaseInterval: 1
-  _healthDecreaseAmount: 1
 --- !u!1 &4637720628912466128
 GameObject:
   m_ObjectHideFlags: 0
