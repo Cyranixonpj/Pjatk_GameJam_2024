@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 1599546602894130336}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,6 +306,7 @@ MonoBehaviour:
   sfxSource: {fileID: 6680073580419628922}
   backgroundMusic: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
   death: {fileID: 0}
-  Shoot: {fileID: 0}
+  Shoot: {fileID: 8300000, guid: 34b439bf70b80a6409eadecc6be92d68, type: 3}
+  EnemyShoot: {fileID: 8300000, guid: 6739c01659ad96d47987f4ddee226b36, type: 3}
   Hit: {fileID: 0}
   Walk: {fileID: 0}

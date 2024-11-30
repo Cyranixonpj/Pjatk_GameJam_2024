@@ -30,22 +30,24 @@ public class GuardShooting : MonoBehaviour
 
     void Update()
     {
-        float distance = Vector2.Distance(transform.position, player.transform.position);
-        // Debug.Log(distance);
-        
-        if (distance < 5)
+        if (player != null)
         {
-            timer += Time.deltaTime;
-
-            if (timer > 1)
+            float distance = Vector2.Distance(transform.position, player.transform.position);
+            if (distance < 5)
             {
-                timer = 0;
+                timer += Time.deltaTime;
 
-                _audioManager.PlaySFX(_audioManager.EnemyShoot);
-                Shoot();
+                if (timer > 1)
+                {
+                    timer = 0;
 
+                    _audioManager.PlaySFX(_audioManager.EnemyShoot);
+                    Shoot();
+                }
             }
         }
+
+        // Debug.Log(distance);
     }
 
     void Shoot()
