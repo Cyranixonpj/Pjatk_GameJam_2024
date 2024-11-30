@@ -20,7 +20,6 @@ namespace Player
         {
             if (_fireTimer <= 0)
             {
-                Debug.Log("Fire");
                 _fireTimer = fireCooldown;
                 GameObject bullet = bulletPrefabs[FindProjectile()];
                 bullet.transform.position = firePoint.position;
