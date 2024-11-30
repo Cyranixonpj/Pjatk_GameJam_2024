@@ -7,6 +7,9 @@ public class EnemyFarmacist : MonoBehaviour
     public Transform[] pathPoints;
     public float speed = 2f;
     private int currentPointIndex = 0;
+    [SerializeField] private ParticleSystem bloodParticles;
+
+    private ParticleSystem _bloodParticlesInstance;
 
     private void Update()
     {
@@ -50,5 +53,21 @@ public class EnemyFarmacist : MonoBehaviour
                 Gizmos.DrawLine(pathPoints[i].position, pathPoints[(i + 1) % pathPoints.Length].position);
             }
         }
+    }
+
+    private void SpawnBloodParticles(Vector2 direction)
+    {
+        Debug.Log(direction);
+
+        Quaternion spawnRotation = Quaternion.FromToRotation(direction,-1*direction);
+
+        _bloodParticlesInstance = Instantiate(bloodParticles, transform.position, spawnRotation);
+    }
+
+    public void WaitAndSpawnBloodParticles(Vector2 direction)
+    {
+        SpawnBloodParticles(direction);
+        //TODO: Add Death animation
+        Destroy(gameObject, 0.1f);
     }
 }

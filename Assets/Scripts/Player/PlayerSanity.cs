@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,5 +16,9 @@ public class PlayerSanity : MonoBehaviour
     public void SanityDecrease()
     {
         _currentSanity--;
+        if (_currentSanity <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
