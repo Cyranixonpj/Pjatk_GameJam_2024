@@ -8,17 +8,7 @@ namespace Collectibles
         {
             if (other.CompareTag("Player"))
             {
-                var playerInventory = other.GetComponent<PlayerInventory>();
-
-                if (playerInventory != null)
-                {
-                    playerInventory.AddCoin();
-                    Destroy(gameObject);
-                }
-                else
-                {
-                    Debug.LogError("PlayerInventory not found! Collection failed.");
-                }
+                FindObjectOfType<CounterUPUP>().AddItem();
             }
         }
     }
