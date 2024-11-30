@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,18 @@ public class EnemyFarmacist : MonoBehaviour
     public Transform[] pathPoints;
     public float speed = 2f;
     private int currentPointIndex = 0;
+    [SerializeField] private ParticleSystem bloodParticles;
+
+    private ParticleSystem _bloodParticlesInstance;
+
+    private SpriteRenderer _spriteRenderer;
+
+
+    private void Start()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        
+    }
 
     private void Update()
     {
@@ -25,6 +38,11 @@ public class EnemyFarmacist : MonoBehaviour
         {
             currentPointIndex = (currentPointIndex + 1) % pathPoints.Length;
         }
+    }
+
+    private void FlipSprite(bool flip)
+    {
+        _spriteRenderer.flipX = flip;
     }
     
     private void OnDrawGizmos()
@@ -50,5 +68,21 @@ public class EnemyFarmacist : MonoBehaviour
                 Gizmos.DrawLine(pathPoints[i].position, pathPoints[(i + 1) % pathPoints.Length].position);
             }
         }
+    }
+
+    private void SpawnBloodParticles(Vector2 direction)
+    {
+        Debug.Log(direction);
+
+        Quaternion spawnRotation = Quaternion.FromToRotation(direction,-1*direction);
+
+        _bloodParticlesInstance = Instantiate(bloodParticles, transform.position, spawnRotation);
+    }
+
+    public void WaitAndSpawnBloodParticles(Vector2 direction)
+    {
+        SpawnBloodParticles(direction);
+        //TODO: Add Death animation
+        Destroy(gameObject, 0.1f);
     }
 }
