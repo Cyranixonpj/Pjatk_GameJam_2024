@@ -15,6 +15,7 @@ namespace Player
         private bool _hit;
         private void Awake()
         {
+            Debug.Log("Fired");
             _capsuleCollider2D = GetComponent<CapsuleCollider2D>();
         }
 
@@ -23,6 +24,7 @@ namespace Player
             _lifeTimer -= Time.deltaTime;
             if (_lifeTimer <= 0)
             {
+                Debug.Log("Destroyed");
                 Deactivate();
             }
         }
