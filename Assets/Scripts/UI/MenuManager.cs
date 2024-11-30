@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class MenuManager : MonoBehaviour
@@ -35,6 +36,11 @@ public class MenuManager : MonoBehaviour
         _mainView.SetActive(true);
         _tutorialView.SetActive(false);
         _creditsView.SetActive(false);
+    }
+    
+    public void PlayClicked()
+    {
+        SceneManager.LoadSceneAsync(1);
     }
     
     public void ExitClicked()

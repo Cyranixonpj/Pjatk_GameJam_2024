@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8879608680843970247}
   - component: {fileID: 509696138863721789}
   - component: {fileID: 6479475675517416455}
+  - component: {fileID: 7584664840991854740}
   m_Layer: 0
   m_Name: APAP
   m_TagString: APAP
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.69, y: -0.61, z: 0}
-  m_LocalScale: {x: 0.52321917, y: 0.6618048, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.97, y: 1.64}
   m_EdgeRadius: 0
+--- !u!114 &7584664840991854740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993253618563788050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329104e4869275a4c80b2b6c5c181f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
