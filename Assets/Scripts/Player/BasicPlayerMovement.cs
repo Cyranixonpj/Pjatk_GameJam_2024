@@ -14,6 +14,7 @@ namespace Player
         
         private Vector2 _moveDirection, _mousePosition;
         private Camera _camera;
+        
 
         void Awake()
         {
