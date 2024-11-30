@@ -10,6 +10,12 @@ namespace Player
         [SerializeField] private Transform firePoint;
         [SerializeField] private float fireCooldown;
         private float _fireTimer;
+        private AudioManager _audioManager;
+
+        private void Awake()
+        {
+            _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        }
 
         public void Update()
         {
@@ -20,6 +26,7 @@ namespace Player
         {
             if (_fireTimer <= 0)
             {
+                _audioManager.PlaySFX(_audioManager.Shoot);
                 _fireTimer = fireCooldown;
                 GameObject bullet = bulletPrefabs[FindProjectile()];
                 bullet.transform.position = firePoint.position;
