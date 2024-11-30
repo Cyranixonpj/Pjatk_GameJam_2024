@@ -10,12 +10,12 @@ namespace Player
         [SerializeField] private float lifeTime;
         private float _lifeTimer;
         [SerializeField] private string layerName;
+        private GameObject player;
         
         private CapsuleCollider2D _capsuleCollider2D;
         private bool _hit;
         private void Awake()
         {
-            Debug.Log("Fired");
             _capsuleCollider2D = GetComponent<CapsuleCollider2D>();
         }
 
@@ -24,7 +24,6 @@ namespace Player
             _lifeTimer -= Time.deltaTime;
             if (_lifeTimer <= 0)
             {
-                Debug.Log("Destroyed");
                 Deactivate();
             }
         }
@@ -35,7 +34,12 @@ namespace Player
             _capsuleCollider2D.enabled = false;
             if (other.gameObject.layer == LayerMask.NameToLayer(layerName) && other.isTrigger)
             {
-                //TODO: Deal dmg
+                Debug.Log("Hit");
+               Destroy(other.gameObject);
+               if (player.GetComponent<PlayerSanity>() != null)
+               {
+                   player.GetComponent<PlayerSanity>().SanityDecrease();
+               }
             }
 
             Deactivate();
@@ -52,6 +56,16 @@ namespace Player
             _lifeTimer = lifeTime;
             _hit = false;
             _capsuleCollider2D.enabled = true;
+        }
+
+        public void SetPlayer(GameObject player)
+        {
+            this.player = player;
+        }
+
+        public GameObject GetPlayer()
+        {
+            return player;
         }
     }
 }
