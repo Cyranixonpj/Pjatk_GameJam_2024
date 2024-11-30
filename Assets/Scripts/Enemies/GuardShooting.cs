@@ -30,13 +30,12 @@ public class GuardShooting : MonoBehaviour
             if (timer > 1)
             {
                 timer = 0;
-                shoot();
+                Shoot();
             }
         }
     }
 
-
-    void shoot()
+    void Shoot()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
     }

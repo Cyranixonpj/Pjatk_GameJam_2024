@@ -1094,11 +1094,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41aa510d53a52263fb3e06df3d633d34, type: 3}
---- !u!1 &1005391616 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1652757455551861423, guid: 41aa510d53a52263fb3e06df3d633d34, type: 3}
-  m_PrefabInstance: {fileID: 1029481423}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1005391617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2928032130781068891, guid: 41aa510d53a52263fb3e06df3d633d34, type: 3}
@@ -1226,11 +1221,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41aa510d53a52263fb3e06df3d633d34, type: 3}
---- !u!1 &1237735098 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1652757455551861423, guid: 41aa510d53a52263fb3e06df3d633d34, type: 3}
-  m_PrefabInstance: {fileID: 519938607}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1237735099 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2928032130781068891, guid: 41aa510d53a52263fb3e06df3d633d34, type: 3}
@@ -1364,11 +1354,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41aa510d53a52263fb3e06df3d633d34, type: 3}
---- !u!1 &1404422127 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1652757455551861423, guid: 41aa510d53a52263fb3e06df3d633d34, type: 3}
-  m_PrefabInstance: {fileID: 969867938}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1404422128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2928032130781068891, guid: 41aa510d53a52263fb3e06df3d633d34, type: 3}
@@ -2178,18 +2163,6 @@ PrefabInstance:
       propertyPath: bulletPrefabs.Array.data[17]
       value: 
       objectReference: {fileID: 2096767787}
-    - target: {fileID: 7330892577790148229, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
-      propertyPath: bulletPrefabs.Array.data[18]
-      value: 
-      objectReference: {fileID: 1005391616}
-    - target: {fileID: 7330892577790148229, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
-      propertyPath: bulletPrefabs.Array.data[19]
-      value: 
-      objectReference: {fileID: 1237735098}
-    - target: {fileID: 7330892577790148229, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
-      propertyPath: bulletPrefabs.Array.data[20]
-      value: 
-      objectReference: {fileID: 1404422127}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
