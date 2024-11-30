@@ -30,6 +30,10 @@ namespace Player
             //TODO:Check if moving diagonally makes u move faster
             _xInput = Input.GetAxisRaw("Horizontal");
             _yInput = Input.GetAxisRaw("Vertical");
+            if ((_xInput == 0 && _yInput == 0) && _moveDirection.x != 0 || _moveDirection.y != 0)
+            {
+                _lastMoveDirection = _moveDirection;
+            }
             Animate();
 
             //Fire Bullet
@@ -42,11 +46,6 @@ namespace Player
             _speedY = _yInput * speed;
             Move();
             Vector2 aimDirection = new Vector2(_xInput, _yInput) - _rigidbody.position;
-
-            if ((_xInput == 0 && _yInput == 0) && _moveDirection.x != 0 && _moveDirection.y != 0)
-            {
-                _lastMoveDirection = _moveDirection;
-            }
 
             _moveDirection = new Vector2(_speedX, _speedY).normalized;
         }
