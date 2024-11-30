@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Player
@@ -8,7 +7,6 @@ namespace Player
     {
 
         [SerializeField]private float speed;
-        [SerializeField]private Weapon weapon;
         private float _speedX, _speedY, _xInput, _yInput;
         Rigidbody2D _rigidbody;
         
@@ -28,9 +26,6 @@ namespace Player
             _yInput = Input.GetAxisRaw("Vertical");
             _moveDirection = new Vector2(_xInput, _yInput).normalized;
             if (_camera) _mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
-
-            //Fire Bullet
-            if (Input.GetButtonDown("Fire1")) weapon.Fire();
         }
 
         private void FixedUpdate()
@@ -41,16 +36,6 @@ namespace Player
             Vector2 aimDirection = _mousePosition - _rigidbody.position;
             float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
             _rigidbody.rotation = aimAngle;
-        }
-
-        private void OnTriggerEnter2D(Collider2D collider)
-        {
-            if (collider.gameObject.CompareTag("APAP"))
-            {
-                PlayerHealth playerHealth = GetComponent<PlayerHealth>();
-                playerHealth.Heal(20);
-                Destroy(collider.gameObject);
-            }
         }
     }
 }
