@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,15 @@ public class EnemyFarmacist : MonoBehaviour
     public Transform[] pathPoints;
     public float speed = 2f;
     private int currentPointIndex = 0;
+
+    private SpriteRenderer _spriteRenderer;
+
+
+    private void Start()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        
+    }
 
     private void Update()
     {
@@ -25,6 +35,11 @@ public class EnemyFarmacist : MonoBehaviour
         {
             currentPointIndex = (currentPointIndex + 1) % pathPoints.Length;
         }
+    }
+
+    private void FlipSprite(bool flip)
+    {
+        _spriteRenderer.flipX = flip;
     }
     
     private void OnDrawGizmos()
