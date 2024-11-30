@@ -7,6 +7,7 @@ namespace Player
     {
 
         [SerializeField]private float speed;
+        [SerializeField]private Weapon weapon;
         private float _speedX, _speedY, _xInput, _yInput;
         Rigidbody2D _rigidbody;
         
@@ -26,6 +27,9 @@ namespace Player
             _yInput = Input.GetAxisRaw("Vertical");
             _moveDirection = new Vector2(_xInput, _yInput).normalized;
             if (_camera) _mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+
+            //Fire Bullet
+            if (Input.GetButtonDown("Fire1")) weapon.Fire();
         }
 
         private void FixedUpdate()
