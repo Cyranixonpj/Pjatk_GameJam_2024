@@ -37,7 +37,8 @@ public class PlayerHealth : MonoBehaviour
         if (_currentHealth <= 0)
         {
             _currentHealth = 0;
-          
+
+            Destroy(gameObject);
            
         }
     }
