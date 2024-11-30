@@ -15,7 +15,7 @@ public class EnemyBullet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
         
         Vector3 direction = (player.transform.position - transform.position).normalized;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
@@ -39,7 +39,9 @@ public class EnemyBullet : MonoBehaviour
         {
             // TODO playerHealth zabieranie życia playerowi 
             // other.gameObject.GetComponent<playerHealth>() 
+            
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        
     }
 }
