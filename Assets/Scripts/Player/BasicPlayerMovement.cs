@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Player
@@ -41,16 +40,6 @@ namespace Player
             Vector2 aimDirection = _mousePosition - _rigidbody.position;
             float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
             _rigidbody.rotation = aimAngle;
-        }
-
-        private void OnTriggerEnter2D(Collider2D collider)
-        {
-            if (collider.gameObject.CompareTag("APAP"))
-            {
-                PlayerHealth playerHealth = GetComponent<PlayerHealth>();
-                playerHealth.Heal(20);
-                Destroy(collider.gameObject);
-            }
         }
     }
 }
