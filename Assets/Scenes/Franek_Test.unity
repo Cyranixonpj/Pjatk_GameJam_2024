@@ -1895,14 +1895,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 669886379336587123, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637720628912466128, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 5341621782240675161, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1565
@@ -1942,10 +1934,6 @@ PrefabInstance:
     - target: {fileID: 5341621782240675161, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7330892577790148229, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
-      propertyPath: fireCooldown
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7330892577790148229, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
       propertyPath: bulletPrefabs.Array.data[0]
@@ -2031,10 +2019,6 @@ PrefabInstance:
       propertyPath: bulletPrefabs.Array.data[20]
       value: 
       objectReference: {fileID: 1404422127}
-    - target: {fileID: 8032805325726986933, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
