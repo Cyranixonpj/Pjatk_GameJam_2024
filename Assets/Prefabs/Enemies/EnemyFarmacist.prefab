@@ -265,7 +265,6 @@ MonoBehaviour:
   - {fileID: 3599934730467358066}
   - {fileID: 7635982561762307910}
   speed: 4
-  bloodParticles: {fileID: 4600600581844132408, guid: 9311df724dafc2f3991a3297d715231a, type: 3}
 --- !u!1 &7561617776385107430
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2829115045794752252}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: BulletPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8042419616545998433}
   - component: {fileID: 6133404265839451158}
   - component: {fileID: 970880194281157924}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,4 +195,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2638915855640794487, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
   bulletPos: {fileID: 2829115045794752252}
-  bloodParticles: {fileID: 4600600581844132408, guid: 9311df724dafc2f3991a3297d715231a, type: 3}

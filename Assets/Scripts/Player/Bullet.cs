@@ -34,12 +34,12 @@ namespace Player
             _capsuleCollider2D.enabled = false;
             if (other.gameObject.layer == LayerMask.NameToLayer(layerName) && other.isTrigger)
             {
-                if (other.GetComponent<EnemyFarmacist>() != null) other.GetComponent<EnemyFarmacist>().WaitAndSpawnBloodParticles(transform.position);
-                if (other.GetComponent<GuardShooting>() != null) other.GetComponent<GuardShooting>().WaitAndSpawnBloodParticles(transform.position);
-                if (player.GetComponent<PlayerSanity>() != null)
-                {
-                    player.GetComponent<PlayerSanity>().SanityDecrease();
-                }
+                Debug.Log("Hit");
+               Destroy(other.gameObject);
+               if (player.GetComponent<PlayerSanity>() != null)
+               {
+                   player.GetComponent<PlayerSanity>().SanityDecrease();
+               }
             }
 
             Deactivate();
