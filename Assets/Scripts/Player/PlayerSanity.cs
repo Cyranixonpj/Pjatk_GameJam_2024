@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerSanity : MonoBehaviour
 {
-    [SerializeField] private int _maxSanity;
-    [SerializeField] private int _currentSanity;
+    [SerializeField] public int _maxSanity;
+    [SerializeField] public int _currentSanity;
 
     private void Awake()
     {
