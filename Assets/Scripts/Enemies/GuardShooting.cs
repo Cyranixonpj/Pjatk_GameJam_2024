@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,19 @@ public class GuardShooting : MonoBehaviour
     public Transform bulletPos;
     private GameObject player;
 
+    [SerializeField] private ParticleSystem bloodParticles;
+    private AudioManager _audioManager;
+
+    private ParticleSystem _bloodParticlesInstance;
+
+
     private float timer;
+
+
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
@@ -27,7 +40,10 @@ public class GuardShooting : MonoBehaviour
             if (timer > 1)
             {
                 timer = 0;
+
+                _audioManager.PlaySFX(_audioManager.EnemyShoot);
                 Shoot();
+
             }
         }
     }

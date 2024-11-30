@@ -15,6 +15,7 @@ namespace Player
         
         private Vector2 _moveDirection, _mousePosition;
         private Camera _camera;
+        
 
         private Vector2 _lastMoveDirection;
 
