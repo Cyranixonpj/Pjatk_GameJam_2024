@@ -10,15 +10,19 @@ namespace Player
         [SerializeField]private float speed;
         [SerializeField]private Weapon weapon;
         private float _speedX, _speedY, _xInput, _yInput;
-        Rigidbody2D _rigidbody;
+        private Rigidbody2D _rigidbody;
+        private Animator _animator;
         
         private Vector2 _moveDirection, _mousePosition;
         private Camera _camera;
+
+        private Vector2 _lastMoveDirection;
 
         void Awake()
         {
             _camera = Camera.main;
             _rigidbody = GetComponent<Rigidbody2D>();
+            _animator = GetComponent<Animator>();
         }
 
         void Update()
@@ -26,8 +30,7 @@ namespace Player
             //TODO:Check if moving diagonally makes u move faster
             _xInput = Input.GetAxisRaw("Horizontal");
             _yInput = Input.GetAxisRaw("Vertical");
-            _moveDirection = new Vector2(_xInput, _yInput).normalized;
-            if (_camera) _mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+            Animate();
 
             //Fire Bullet
             if (Input.GetButtonDown("Fire1")) weapon.Fire();
@@ -37,10 +40,20 @@ namespace Player
         {
             _speedX = _xInput * speed;
             _speedY = _yInput * speed;
+            Move();
+            Vector2 aimDirection = new Vector2(_xInput, _yInput) - _rigidbody.position;
+
+            if ((_xInput == 0 && _yInput == 0) && _moveDirection.x != 0 && _moveDirection.y != 0)
+            {
+                _lastMoveDirection = _moveDirection;
+            }
+
+            _moveDirection = new Vector2(_speedX, _speedY).normalized;
+        }
+
+        private void Move()
+        {
             _rigidbody.velocity = new Vector2(_speedX, _speedY);
-            Vector2 aimDirection = _mousePosition - _rigidbody.position;
-            float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-            _rigidbody.rotation = aimAngle;
         }
 
         private void OnTriggerEnter2D(Collider2D collider)
@@ -51,6 +64,15 @@ namespace Player
                 playerHealth.Heal(20);
                 Destroy(collider.gameObject);
             }
+        }
+
+        private void Animate()
+        {
+            _animator.SetFloat("AnimMoveX", _moveDirection.x);
+            _animator.SetFloat("AnimMoveY", _moveDirection.y);
+            _animator.SetFloat("AnimMoveMagnitude", _moveDirection.magnitude);
+            _animator.SetFloat("AnimLastMoveX", _lastMoveDirection.x);
+            _animator.SetFloat("AnimLastMoveY", _lastMoveDirection.y);
         }
     }
 }
