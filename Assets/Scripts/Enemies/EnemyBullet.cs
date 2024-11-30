@@ -46,6 +46,7 @@ public class EnemyBullet : MonoBehaviour
             _animator.SetTrigger("Hit");
             rb.velocity = Vector2.zero;
             Destroy(gameObject,0.5f);
+            Destroy(other.gameObject);
             
         }
     }
