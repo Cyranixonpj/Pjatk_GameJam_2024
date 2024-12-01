@@ -13,6 +13,7 @@ public class GuardShooting : MonoBehaviour
     private AudioManager _audioManager;
 
     private ParticleSystem _bloodParticlesInstance;
+    private Animator _animator;
 
 
     private float timer;
@@ -21,6 +22,7 @@ public class GuardShooting : MonoBehaviour
     private void Awake()
     {
         _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        _animator = GetComponent<Animator>();
     }
 
     void Start()
@@ -42,6 +44,9 @@ public class GuardShooting : MonoBehaviour
                     timer = 0;
 
                     _audioManager.PlaySFX(_audioManager.EnemyShoot);
+                    
+                    SetGuardDirection();
+                    
                     Shoot();
                 }
             }
@@ -53,5 +58,35 @@ public class GuardShooting : MonoBehaviour
     void Shoot()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
+    }
+    
+    private void SetGuardDirection()
+    {
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            
+            if (direction.x > 0)
+            {
+                _animator.SetTrigger("Right"); 
+            }
+            else
+            {
+                _animator.SetTrigger("Left"); 
+            }
+        }
+        else
+        {
+            
+            if (direction.y > 0)
+            {
+                _animator.SetTrigger("Up"); 
+            }
+            else
+            {
+                _animator.SetTrigger("Down"); 
+            }
+        }
     }
 }

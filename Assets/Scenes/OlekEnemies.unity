@@ -1008,11 +1008,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5341621782240675161, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.46
+      value: -3.77
       objectReference: {fileID: 0}
     - target: {fileID: 5341621782240675161, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.01
+      value: -1.39
       objectReference: {fileID: 0}
     - target: {fileID: 5341621782240675161, guid: 605e826f1a995cd7db68b477c920485d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1818,63 +1818,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41aa510d53a52263fb3e06df3d633d34, type: 3}
---- !u!1001 &1070963482369440780
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2638915855640794487, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-      propertyPath: m_Name
-      value: BulletEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3627618336584351670, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.113
-      objectReference: {fileID: 0}
-    - target: {fileID: 3627618336584351670, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.425
-      objectReference: {fileID: 0}
-    - target: {fileID: 3627618336584351670, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3627618336584351670, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3627618336584351670, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3627618336584351670, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3627618336584351670, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3627618336584351670, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3627618336584351670, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3627618336584351670, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
 --- !u!1001 &2928404916294092653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1940,25 +1883,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 970880194281157924, guid: 4234076edbee4c745a91a717b987286b, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 2638915855640794487, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
-    - target: {fileID: 2829115045794752252, guid: 4234076edbee4c745a91a717b987286b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 2829115045794752252, guid: 4234076edbee4c745a91a717b987286b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.52
-      objectReference: {fileID: 0}
     - target: {fileID: 4349172423689380742, guid: 4234076edbee4c745a91a717b987286b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.79
+      value: -0.64
       objectReference: {fileID: 0}
     - target: {fileID: 4349172423689380742, guid: 4234076edbee4c745a91a717b987286b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.78
+      value: 1.89
       objectReference: {fileID: 0}
     - target: {fileID: 4349172423689380742, guid: 4234076edbee4c745a91a717b987286b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2012,6 +1943,10 @@ PrefabInstance:
     - target: {fileID: 2701509908144002499, guid: 95d0a1425bc4ecf42acc7f036feb81a6, type: 3}
       propertyPath: m_Name
       value: EnemyFarmacist
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701509908144002499, guid: 95d0a1425bc4ecf42acc7f036feb81a6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3121227058937411065, guid: 95d0a1425bc4ecf42acc7f036feb81a6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2070,4 +2005,3 @@ SceneRoots:
   - {fileID: 1179642454}
   - {fileID: 1296795394}
   - {fileID: 2928404916294092653}
-  - {fileID: 1070963482369440780}
