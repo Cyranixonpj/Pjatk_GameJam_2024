@@ -13,6 +13,8 @@ public class PoliceCanvas : MonoBehaviour
         StartCoroutine(WaitAndBackToMenu());
     }
 
+    
+
     private IEnumerator WaitAndBackToMenu()
     {
         yield return new WaitForSeconds(5f);
