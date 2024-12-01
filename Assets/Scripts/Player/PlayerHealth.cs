@@ -64,12 +64,12 @@ public class PlayerHealth : MonoBehaviour
         if (_postProcessingManager != null)
         {
             float healthPercentage = (float)_currentHealth / _maxHealth;
-            Debug.Log($"Updating post-processing with health percentage: {healthPercentage}");
+           // Debug.Log($"Updating post-processing with health percentage: {healthPercentage}");
             _postProcessingManager.UpdateEffects(healthPercentage);
         }
         else
         {
-            Debug.LogError("PostProcessingManager is not assigned.");
+            //Debug.LogError("PostProcessingManager is not assigned.");
         }
     }
     

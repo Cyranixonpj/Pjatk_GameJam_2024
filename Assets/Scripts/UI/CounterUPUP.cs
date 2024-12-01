@@ -4,7 +4,7 @@ using TMPro;
 public class CounterUPUP : MonoBehaviour
 {
     public TMP_Text counterText;
-    private int collectedItems = 0;
+    public int collectedItems = 0;
 
     void Start()
     {
