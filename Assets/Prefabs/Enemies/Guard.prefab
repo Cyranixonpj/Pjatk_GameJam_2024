@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3420674937276206382}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -0.27, z: 0}
+  m_LocalPosition: {x: 0.352, y: -0.106, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8042419616545998433}
   - component: {fileID: 6133404265839451158}
   - component: {fileID: 970880194281157924}
+  - component: {fileID: 3824535115967384438}
   m_Layer: 7
   m_Name: Guard
   m_TagString: Untagged
@@ -108,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 774110569
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec267a388c24e194d9a0eca52a709eb9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -196,3 +197,24 @@ MonoBehaviour:
   bullet: {fileID: 2638915855640794487, guid: 4fd58f0f093d0f9488058e06a9f28038, type: 3}
   bulletPos: {fileID: 2829115045794752252}
   bloodParticles: {fileID: 0}
+--- !u!95 &3824535115967384438
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8751615407537675122}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7775e7e64d6d9a347b211f4ebf23aeb4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

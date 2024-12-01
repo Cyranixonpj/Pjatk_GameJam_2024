@@ -25,6 +25,8 @@ public class EnemyBullet : MonoBehaviour
         transform.rotation = Quaternion.Euler(0,0,rot+180);
 
         _animator = GetComponent<Animator>();
+        
+        
     }
     
     void Update()
@@ -50,4 +52,6 @@ public class EnemyBullet : MonoBehaviour
             
         }
     }
+    
+    
 }
