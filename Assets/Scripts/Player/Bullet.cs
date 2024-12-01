@@ -35,6 +35,7 @@ namespace Player
             if (other.gameObject.layer == LayerMask.NameToLayer(layerName) && other.isTrigger)
             {
                 Debug.Log("Hit");
+                if (other.GetComponent<EnemyFarmacist>() != null) other.GetComponent<EnemyFarmacist>().SpawnBlood();
                 Destroy(other.gameObject);
                 if (player.GetComponent<PlayerSanity>() != null)
                 {

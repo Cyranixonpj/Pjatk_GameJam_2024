@@ -9,6 +9,8 @@ public class EnemyFarmacist : MonoBehaviour
     public float speed = 2f;
     private int currentPointIndex = 0;
     private Vector3 direction;
+    [SerializeField] private ParticleSystem bloodSystem;
+    private ParticleSystem _bloodSystemInstance;
 
     private Animator _animator;
     private void Awake()
@@ -72,5 +74,11 @@ public class EnemyFarmacist : MonoBehaviour
     {
         _animator.SetFloat("AnimMoveX", direction.x);
         _animator.SetFloat("AnimMoveY", direction.y);
+    }
+
+    public void SpawnBlood()
+    {
+        Debug.Log("Spawn Blood");
+        bloodSystem = Instantiate(bloodSystem, transform.position, Quaternion.identity);
     }
 }

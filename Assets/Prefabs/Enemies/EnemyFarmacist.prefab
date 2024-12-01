@@ -266,6 +266,7 @@ MonoBehaviour:
   - {fileID: 3599934730467358066}
   - {fileID: 7635982561762307910}
   speed: 4
+  bloodSystem: {fileID: 1663441789780088942, guid: a4c3423b0249bf9ffb72d1411d3b494a, type: 3}
 --- !u!95 &7836688571392415870
 Animator:
   serializedVersion: 5
