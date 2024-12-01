@@ -35,11 +35,11 @@ namespace Player
             if (other.gameObject.layer == LayerMask.NameToLayer(layerName) && other.isTrigger)
             {
                 Debug.Log("Hit");
-               Destroy(other.gameObject);
-               if (player.GetComponent<PlayerSanity>() != null)
-               {
-                   player.GetComponent<PlayerSanity>().SanityDecrease();
-               }
+                Destroy(other.gameObject);
+                if (player.GetComponent<PlayerSanity>() != null)
+                {
+                    player.GetComponent<PlayerSanity>().SanityDecrease();
+                }
             }
 
             Deactivate();
