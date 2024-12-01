@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GuardShooting : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class GuardShooting : MonoBehaviour
     public Transform bulletPos;
     private GameObject player;
 
-    [SerializeField] private ParticleSystem bloodParticles;
+    [SerializeField] private ParticleSystem bloodSystem;
     private AudioManager _audioManager;
 
     private ParticleSystem _bloodParticlesInstance;
@@ -51,8 +52,6 @@ public class GuardShooting : MonoBehaviour
                 }
             }
         }
-
-        // Debug.Log(distance);
     }
 
     void Shoot()
@@ -88,5 +87,11 @@ public class GuardShooting : MonoBehaviour
                 _animator.SetTrigger("Down"); 
             }
         }
+    }
+    
+    public void SpawnBlood()
+    {
+        Debug.Log("Spawn Blood");
+        bloodSystem = Instantiate(bloodSystem, transform.position, Quaternion.identity);
     }
 }

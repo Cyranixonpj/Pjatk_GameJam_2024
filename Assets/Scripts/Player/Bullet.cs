@@ -37,6 +37,7 @@ namespace Player
             {
                 Debug.Log("Hit");
                 if (other.GetComponent<EnemyFarmacist>() != null) other.GetComponent<EnemyFarmacist>().SpawnBlood();
+                if (other.GetComponent<GuardShooting>() != null) other.GetComponent<GuardShooting>().SpawnBlood();
                 Destroy(other.gameObject);
 
                 if (player != null)
