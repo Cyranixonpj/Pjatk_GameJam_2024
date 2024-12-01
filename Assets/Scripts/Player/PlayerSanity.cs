@@ -6,6 +6,7 @@ public class PlayerSanity : MonoBehaviour
 {
     [SerializeField] public int _maxSanity;
     [SerializeField] public int _currentSanity;
+    [SerializeField] private GameObject overdoseCanvas;
 
     private void Awake()
     {
@@ -15,5 +16,10 @@ public class PlayerSanity : MonoBehaviour
     public void SanityDecrease()
     {
         _currentSanity--;
+        if (_currentSanity <= 0)
+        {
+            _currentSanity = 0;
+            overdoseCanvas.GetComponent<OverdoseCanvas>().Show();
+        }
     }
 }

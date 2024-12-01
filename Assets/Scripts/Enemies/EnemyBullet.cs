@@ -43,11 +43,12 @@ public class EnemyBullet : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // TODO playerHealth zabieranie życia playerowi 
-            // other.gameObject.GetComponent<playerHealth>() 
-            
+            // other.gameObject.GetComponent<playerHealth>()
+            GameObject policeCanvas = other.gameObject.GetComponent<CanvasHolder>().policeCanvas;
             _animator.SetTrigger("Hit");
             rb.velocity = Vector2.zero;
             Destroy(gameObject,0.5f);
+            policeCanvas.GetComponent<PoliceCanvas>().Show();
             Destroy(other.gameObject);
             
         }

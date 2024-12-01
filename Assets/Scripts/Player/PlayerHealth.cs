@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float _healthDecreaseInterval = 1.0f; 
     [SerializeField] private int _healthDecreaseAmount = 1;
     private PostProcessingManager _postProcessingManager;
+    [SerializeField] private GameObject overdoseCanvas;
     
     private float _timeSinceLastDecrease;
     
@@ -41,9 +43,8 @@ public class PlayerHealth : MonoBehaviour
         if (_currentHealth <= 0)
         {
             _currentHealth = 0;
-
+            overdoseCanvas.GetComponent<OverdoseCanvas>().Show();
             Destroy(gameObject);
-           
         }
 
         UpdatePostProcessing();

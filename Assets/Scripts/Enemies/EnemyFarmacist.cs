@@ -66,6 +66,9 @@ public class EnemyFarmacist : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GameObject policeCanvas = other.gameObject.GetComponent<CanvasHolder>().policeCanvas;
+            Debug.Log(policeCanvas);
+            policeCanvas.GetComponent<PoliceCanvas>().Show();
             Destroy(other.gameObject,1f);
         }
     }

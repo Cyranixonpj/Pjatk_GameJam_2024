@@ -6,6 +6,8 @@ TagManager:
   tags:
   - APAP
   - Audio
+  - OverdoseCanvas
+  - PoliceCanvas
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - 
+  - Collectibles
   - 
   - 
   - 
@@ -51,4 +53,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 774110569
+    locked: 0
+  - name: Cutscenes
+    uniqueID: 3591841901
     locked: 0
