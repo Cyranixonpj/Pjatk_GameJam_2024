@@ -38,7 +38,7 @@ namespace Player
             Animate();
 
             //Fire Bullet
-            if (Input.GetButtonDown("Fire1")) weapon.Fire();
+            if (Input.GetButtonDown("Fire1") && _moveDirection.magnitude > 0.1) weapon.Fire();
         }
 
         private void FixedUpdate()
