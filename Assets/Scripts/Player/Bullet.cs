@@ -11,9 +11,10 @@ namespace Player
         private float _lifeTimer;
         [SerializeField] private string layerName;
         private GameObject player;
-        
+
         private CapsuleCollider2D _capsuleCollider2D;
         private bool _hit;
+
         private void Awake()
         {
             _capsuleCollider2D = GetComponent<CapsuleCollider2D>();
@@ -35,11 +36,14 @@ namespace Player
             if (other.gameObject.layer == LayerMask.NameToLayer(layerName) && other.isTrigger)
             {
                 Debug.Log("Hit");
-               Destroy(other.gameObject);
-               if (player.GetComponent<PlayerSanity>() != null)
-               {
-                   player.GetComponent<PlayerSanity>().SanityDecrease();
-               }
+                Destroy(other.gameObject);
+                if (player != null)
+                {
+                    if (player.GetComponent<PlayerSanity>() != null)
+                    {
+                        player.GetComponent<PlayerSanity>().SanityDecrease();
+                    }
+                }
             }
 
             Deactivate();

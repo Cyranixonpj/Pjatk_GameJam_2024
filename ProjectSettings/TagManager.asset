@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fade
+    uniqueID: 3528954923
+    locked: 0
   - name: Background
     uniqueID: 2963364177
     locked: 0
