@@ -24,7 +24,7 @@ public class EndCutscens : MonoBehaviour
 
     private void Update()
     {
-        if (_counterUPUP.collectedItems == 11)
+        if (_counterUPUP.collectedItems == 12)
         {
             StartEndCutscene();
         }

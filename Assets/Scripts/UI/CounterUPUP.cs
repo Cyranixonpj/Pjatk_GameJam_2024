@@ -19,6 +19,6 @@ public class CounterUPUP : MonoBehaviour
 
     private void UpdateCounterText()
     {
-        counterText.text =collectedItems + " / 11";
+        counterText.text =collectedItems + " / 12";
     }
 }
