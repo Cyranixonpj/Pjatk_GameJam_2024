@@ -8,6 +8,13 @@ public class EnemyFarmacist : MonoBehaviour
     public Transform[] pathPoints;
     public float speed = 2f;
     private int currentPointIndex = 0;
+    private Vector3 direction;
+
+    private Animator _animator;
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -16,9 +23,9 @@ public class EnemyFarmacist : MonoBehaviour
 
         // Przeciwnik zmierza do obecnego punktu
         Transform targetPoint = pathPoints[currentPointIndex];
-        Vector3 direction = (targetPoint.position - transform.position).normalized;
+        direction = (targetPoint.position - transform.position).normalized;
 
-
+        Animate();
         transform.position += direction * speed * Time.deltaTime;
 
 
@@ -59,5 +66,11 @@ public class EnemyFarmacist : MonoBehaviour
         {
             Destroy(other.gameObject,1f);
         }
+    }
+
+    private void Animate()
+    {
+        _animator.SetFloat("AnimMoveX", direction.x);
+        _animator.SetFloat("AnimMoveY", direction.y);
     }
 }
